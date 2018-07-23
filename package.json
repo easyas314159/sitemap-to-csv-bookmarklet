@@ -1,0 +1,26 @@
+{
+  "name": "sitemap-to-csv",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Converts sitemap.xml to a CSV file",
+  "scripts": {
+    "lint": "eslint src",
+    "test": "npm run lint"
+  },
+  "dependencies": {
+    "rollup": "^0.59.4",
+    "rollup-plugin-eslint": "^4.0.0",
+    "rollup-plugin-babel": "^3.0.4",
+    "rollup-plugin-minify-es": "^1.1.1",
+    "eslint": "^4.18.2",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0"
+  },
+  "author": "Kevin Loney",
+  "license": "MIT License"
+}

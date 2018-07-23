@@ -1,0 +1,21 @@
+{
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "Promise": false
+  },
+  "extends": [
+    "eslint:recommended",
+    "google"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "rules": {
+    "no-tabs": "off",
+    "indent": ["error", "tab"],
+    "no-console": "warn",
+    "no-debugger": "warn"
+  }
+}
