@@ -1,3 +1,16 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="container">
+			<h1>sitemap.xml to CSV bookmarklet</h1>
+			<a href="javascript:!function(){"use strict";function t(t){switch((t=t.documentElement).tagName){case"urlset":return function(t){let e=[];for(let n of t.children){let t={};for(let e of n.children)t[e.tagName]=e.textContent;e.push(t)}return Promise.resolve(e)}(t);case"sitemapindex":return function(t){let n=[];for(let r of t.children){let t=r.getElementsByTagName("loc");if(1!=t.length)throw new Error("Invalid sitemap.xml file");n.push(e(t[0].textContent))}return Promise.all(n)}(t).then(n)}return Promise.resolve([])}function e(e){return function(t){return fetch(t).then(function(t){return t.text()}).then(function(t){return(new window.DOMParser).parseFromString(t,"text/xml")}).catch(function(t){})}(e).then(t)}function n(t){return t.reduce(function(t,e){return t.concat(e)},[])}e(window.location.href).then(function(t){let e=["loc","lastmod","changefreq","priority"],n=[e.join(",")];return t.forEach(function(t){let r=new Array(e.length);r.fill(""),e.forEach(function(e,n){e in t&&(r[n]=t[e])}),n.push(r.join(","))}),n.join("\n")}).then(function(t){let e=new Blob([t],{type:"text/csv"}),n=URL.createObjectURL(e);window.location.href=n})}();
+">sitemap.xml to CSV</a>
+			<p>Drag to your bookmarks bar</p>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+	</body>
 </html>
